@@ -1,0 +1,175 @@
+
+
+		body {
+			margin: 0px;
+		}
+
+		#calBuild {
+			position: relative;
+		    overflow: hidden;
+		    display: inline-flex;
+		}
+		.calmonth {
+		    font-family: helvetica;
+		    color: white;
+		    font-size: 2em;
+		    text-align: center;
+		    align-self: center;
+		    font-weight: bold;
+		}
+		#prevMonth, #currentMonth, #nextMonth {
+			position: relative;
+		}
+		#prevMonth {
+			padding-right: 200px;
+		}
+		#nextMonth {
+			padding-left: 200px;
+		}
+		.flex-center {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+		.column {
+		    flex-direction: column;
+		}
+		.headerBar {
+		    position: absolute;
+		    height: 5em;
+		    top: 1em;
+		    font-family: "helvetica";
+		    font-weight: bold;
+		    left: 1em;
+		    font-size: 3em;
+		    color: white;   
+		}
+		.headerBar .mainYear {
+			font-weight: 300;
+	        color: #626262;
+		}
+		.inline {
+		    display: inline;
+		}
+		.day {
+	        height: 10vw;
+    		width: 10vw;
+    		color: #626262;
+			font-weight:bold;
+		}
+		.day, .preDay, .postDay {
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+		.day.today {
+			color: white;
+		}
+		.preDay {
+	    	height: 10vw;
+    		width: 10vw;
+		}
+		.postDay {
+	    	height: 10vw;
+    		width: 10vw;
+    	}
+    	.postDay p,
+    	.preDay p {
+    		display: none;
+    	}
+		.inline {
+			display: inline;
+		}
+		.week {
+			display: flex;
+		}
+		.flex {
+			display: flex;
+		    justify-content: center;
+		    align-items: stretch;
+		}
+		a {
+			text-decoration: none;
+		}
+		.full-height {
+			height: 100vh;
+		}
+		.colorOverlay {
+		    height: 100vh;
+		    width: 100vw;
+		    position: absolute;
+		    z-index: -9000;
+		    background-color: rgba(0, 0, 0, 0.7);
+		}
+		.backgroundOverlay {
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    z-index: -999998;
+	        filter: grayscale(100%);
+            background-color: black;
+		}
+		.imageContainer {
+			background-size: cover;
+		    /*background-image: url(eric.jpg);*/
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    height: 100vh;
+	        filter: blur(.3em);
+		}
+		.arrowGlyph {
+			background-image: url('arrow.svg');
+		    height: 30px;
+		    width: 30px;
+		    display: flex;
+	        background-repeat: no-repeat;
+	        color: white;
+	        position: fixed;
+		}
+		.right-sidebar .arrowGlyph {
+/*			filter:progid:DXImageTransform.Microsoft.Matrix(Dy=-2);
+			transform: scale(-1, 1);*/
+			right: 5%;
+		}
+		.left-sidebar .arrowGlyph {
+			left: 5%;
+		}
+		.left-sidebar, .right-sidebar {
+		    display: flex;
+    		align-items: center;
+    		/*padding: 0 50px;*/
+		}
+		.left-sidebar:hover, .right-sidebar:hover {
+			cursor: pointer;
+		}
+		.calendarBody {
+			overflow: hidden;
+		}
+
+		@media(max-width: 730px) {
+
+			#prevMonth, #currentMonth, #nextMonth {
+				font-size: 1.5em;
+			}
+			.day, .postDay, .preDay {
+			    height: 12vh;
+    			width: 10vw;
+			}
+			.headerBar {
+			    font-size: 2em;   
+			}	
+		}
+		@media(max-width: 430px) {
+
+			#prevMonth, #currentMonth, #nextMonth {
+				font-size: 1.4em;
+			}
+			.day, .postDay, .preDay {
+			    height: 10vh;
+    			width: 12vw;
+			}
+			.headerBar {
+			    font-size: 1.5em;   
+			}
+		}
+
