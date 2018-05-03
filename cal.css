@@ -8,6 +8,8 @@
 			position: relative;
 		    overflow: hidden;
 		    display: inline-flex;
+		    transition: .7s;
+		    left: 0px;
 		}
 		.calmonth {
 		    font-family: helvetica;
@@ -118,7 +120,7 @@
 	        filter: blur(.3em);
 		}
 		.arrowGlyph {
-			background-image: url('arrow.svg');
+			/*background-image: url('arrow.svg');*/
 		    height: 30px;
 		    width: 30px;
 		    display: flex;
@@ -139,7 +141,7 @@
     		align-items: center;
     		/*padding: 0 50px;*/
 		}
-		.left-sidebar:hover, .right-sidebar:hover {
+		.left-sidebar.arrow:hover, .right-sidebar.arrow:hover {
 			cursor: pointer;
 		}
 		.calendarBody {

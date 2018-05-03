@@ -198,13 +198,33 @@
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
 
-		
+		function moveCalendar(event) {
+			var calHolder = document.getElementById('calBuild');
+			var calElement = document.getElementById('currentMonth');
+			var clientWidth = calElement.clientWidth;
+			var direction = event.target.parentElement.dataset.nav;	
+
+			var symbol = (direction === 'forward') ? '' : '-';	
+
+			console.log(symbol);
+		}
 
 		function moveBack() {
 			var calHolder = document.getElementById('calBuild');
 			var calElement = document.getElementById('currentMonth');
 			var clientWidth = calElement.clientWidth;
 
+			var style = 'left: ' + parseInt(clientWidth +  200) + 'px';
+			calHolder.style = style;
+		}
+
+		function moveForward() {
+			var calHolder = document.getElementById('calBuild');
+			var calElement = document.getElementById('currentMonth');
+			var clientWidth = calElement.clientWidth;
+
+			var style = 'left: -' + parseInt(clientWidth +  200) + 'px';
+			calHolder.style = style;
 		}
 
 

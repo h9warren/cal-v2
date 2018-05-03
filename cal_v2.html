@@ -11,7 +11,7 @@
 			<div class="mainYear inline">Year</div>
 		</div>
 		<div class="calendar-container flex">
-			<div class="left-sidebar arrow" data-nav="back">
+			<div class="left-sidebar arrow" onclick="moveCalendar(event)" data-nav="back">
 				<span class="arrowGlyph">←</span>
 			</div>
 			<div id="calBuild">
@@ -20,7 +20,7 @@
 				<div id="nextMonth" class="calmonth"></div>
 			</div>
 
-			<div class="right-sidebar arrow" data-nav="forward">
+			<div class="right-sidebar arrow" onclick="moveCalendar(event)" data-nav="forward">
 				<span class="arrowGlyph">→</span>
 			</div>
 		</div>
